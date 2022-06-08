@@ -44,4 +44,4 @@ I heard that when calculating page rank, Google skip to random notes with a cert
 
 #### my_ans_min.py
 
-This is my tried and true program to produce the closest distance. Finally, based on solver_greedy.py, I thought to solve it using 2-pot. However, my program was never finished.
+This is my tried and true program to produce the closest distance. Finally, based on solver_greedy.py, I thought to solve it using 2-pot.
