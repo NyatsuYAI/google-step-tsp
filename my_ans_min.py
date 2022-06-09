@@ -54,6 +54,7 @@ def solve(cities):
                 dist_data [distance(cities[i], cities[j])] = []
             
 
+    random_check_city=set()
     for k in range(int(N/5)):
         if len(random_check_city)<50:
             random_check_city.add(random.randint(0,N-1))
