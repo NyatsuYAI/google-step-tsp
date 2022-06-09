@@ -8,6 +8,8 @@ from unittest.util import sorted_list_difference
 import copy
 import random
 
+from anyio import TypedAttributeLookupError
+
 from common import print_tour, read_input
 
 from common import format_tour
@@ -33,7 +35,8 @@ def opt_2(tour, dist,tour_distance):
                 if l1 + l2 > l3 + l4:
                     new_tour = tour[i+1 : j+1]
                     tour[i+1 : j+1] = new_tour[::-1]
-                    tour_distance-=(l1+l2-l3-l4)
+                    tour_distance-=(l1+l2)
+                    tour_distance+=(l3+l4)
                     count += 1
         if count == 0:
             break
@@ -53,7 +56,7 @@ def solve(cities):
 
     
 
-    random_check_city=set()
+    random_check_city=set(range(0,N))
     for k in range(int(N/5)):
         if len(random_check_city)<50:
             random_check_city.add(random.randint(0,N-1))
@@ -75,9 +78,11 @@ def solve(cities):
             tour.append(next_city)
             tour_distance+=dist[current_city][next_city]
             current_city = next_city
-        opt_2(tour,dist,tour_distance)
+
+        tour,tour_distance = opt_2(tour,dist,tour_distance)
         tour_index[tour_distance]=tour
         print(tour_distance)
+
     sorted_tour_index=sorted(tour_index.items(), key=lambda x:x[0])
 
     return sorted_tour_index[0][1]
@@ -87,6 +92,6 @@ def solve(cities):
 if __name__ == '__main__':
     # assert len(sys.argv) > 1
     cities=read_input("./input_6.csv")
-
     tour= solve(cities)
+
     print_tour(tour)
