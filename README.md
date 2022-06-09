@@ -28,6 +28,36 @@ Quoted from
 > shortest possible route that visits each city exactly once and returns to the
 > origin city?
 
+
+## Visualizer
+
+The demo page of the visualizer is
+[here](https://hkocinneide.github.io/google-step-tsp/visualizer/build/default/).
+
+The assignment includes a helper Web page,
+`visualizer/build/default/index.html`, which visualizes your solutions. You need
+to run a HTTP server on your local machine to access the visualizer. Any HTTP
+server is okay. If you are not sure how to run a web server, use the following
+command to run the HTTP server. Make sure that you are in the top directory of
+the assignment before running the command.
+
+```shellsession
+python -m http.server # For Python 3
+python -m SimpleHTTPServer 8000 # If you don’t want to install Python 3
+```
+
+Then, open a browser and navigate to the
+[http://localhost:8000/visualizer/build/default/](http://localhost:8000/visualizer/build/default/).
+
+Visualizer was only tested by Google Chrome. Using the visualizer is up-to you.
+You don’t have to use the visualizer to finish the assignment. The visualizer is
+provided for the purpose of helping you understand the problem.
+
+See
+[GitHub Help](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/)
+to know how to enable GitHub pages on your repository.
+
+
 ## what I do
 
 coding [my_ans.py](/my_ans.py), [my_ans_min.py](/my_ans_min.py) and [my_ans_random.py](my_ans_random.py)
