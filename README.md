@@ -66,7 +66,7 @@ coding [my_ans.py](/my_ans.py), [my_ans_min.py](/my_ans_min.py) and [my_ans_rand
 
 #### my_ans.py
 
-Why is it not enough to choose the closest distance? I was curious if I changed the first point and if the matching would change. Starting from all points, the distance is put into the Index and the closest distance is returned. This time this was also the first easy one I made, but unfortunately it gave the best score.
+Why is it not enough to choose the closest distance? I was curious if I changed the first point and if the matching would change. Starting from all points, the distance is put into the Index and the closest distance is returned.
 
 #### my_ans_random.py
 
