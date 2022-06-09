@@ -54,23 +54,24 @@ def solve(cities):
                 dist_data [distance(cities[i], cities[j])] = []
             
 
-    
-
-    random_check_city=set(range(0,N))
     for k in range(int(N/5)):
         if len(random_check_city)<50:
             random_check_city.add(random.randint(0,N-1))
         else:
             break
+            
     print(random_check_city)
+    
     pre_set_cities=[num for num in range(0,N)]
     tour_index={}
+    
     for current_city in random_check_city:
         preset_cities_copy=copy.copy(pre_set_cities)
         preset_cities_copy.remove(current_city)
         unvisited_cities = set(preset_cities_copy)
         tour = [current_city]
         tour_distance=0
+        
         while unvisited_cities:
             next_city = min(unvisited_cities,
                                 key=lambda city: dist[current_city][city])
