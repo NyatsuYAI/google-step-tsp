@@ -62,6 +62,14 @@ to know how to enable GitHub pages on your repository.
 
 coding [my_ans.py](/my_ans.py), [my_ans_min.py](/my_ans_min.py) and [my_ans_random.py](my_ans_random.py)
 
+## How to 
+
+```shell
+python sample_output_generator.py
+```
+
+it finish, check [http://localhost:8000/visualizer/build/default/](http://localhost:8000/visualizer/build/default/) sample/sa is [my_ans_min.py](/my_ans_min.py) answer.
+
 ## Code 
 
 #### my_ans.py
